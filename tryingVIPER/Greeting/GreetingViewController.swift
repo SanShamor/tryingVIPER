@@ -32,6 +32,9 @@ class GreetingViewController: UIViewController {
         presenter.didTapShowGreetingButton()
     }
     
+    @IBAction func goToDetailScreenButtonPressed(_ sender: Any) {
+    }
+    
 }
 
 // Mark: - GreetingViewInputProtocol

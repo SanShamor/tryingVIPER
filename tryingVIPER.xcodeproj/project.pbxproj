@@ -17,6 +17,10 @@
 		368AA8CD274275970073DC03 /* GreetingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AA8CC274275970073DC03 /* GreetingInteractor.swift */; };
 		368AA8CF274275A80073DC03 /* GreetingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AA8CE274275A80073DC03 /* GreetingConfigurator.swift */; };
 		368AA8D127427C050073DC03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368AA8D027427C050073DC03 /* Person.swift */; };
+		36CCC6A62742F30400862C8E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CCC6A52742F30400862C8E /* DetailsViewController.swift */; };
+		36CCC6A82742F31700862C8E /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CCC6A72742F31700862C8E /* DetailsPresenter.swift */; };
+		36CCC6AA2742F32E00862C8E /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CCC6A92742F32E00862C8E /* DetailsInteractor.swift */; };
+		36CCC6AC2742F35100862C8E /* DetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CCC6AB2742F35100862C8E /* DetailsConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		368AA8CC274275970073DC03 /* GreetingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingInteractor.swift; sourceTree = "<group>"; };
 		368AA8CE274275A80073DC03 /* GreetingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingConfigurator.swift; sourceTree = "<group>"; };
 		368AA8D027427C050073DC03 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		36CCC6A52742F30400862C8E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		36CCC6A72742F31700862C8E /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		36CCC6A92742F32E00862C8E /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		36CCC6AB2742F35100862C8E /* DetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				368AA8C7274275060073DC03 /* Greeting */,
+				36CCC6A42742F2B600862C8E /* Details */,
 				368AA8B2274273C10073DC03 /* AppDelegate.swift */,
 				368AA8B4274273C10073DC03 /* SceneDelegate.swift */,
 				368AA8D027427C050073DC03 /* Person.swift */,
@@ -85,6 +94,17 @@
 				368AA8CE274275A80073DC03 /* GreetingConfigurator.swift */,
 			);
 			path = Greeting;
+			sourceTree = "<group>";
+		};
+		36CCC6A42742F2B600862C8E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				36CCC6A52742F30400862C8E /* DetailsViewController.swift */,
+				36CCC6A72742F31700862C8E /* DetailsPresenter.swift */,
+				36CCC6A92742F32E00862C8E /* DetailsInteractor.swift */,
+				36CCC6AB2742F35100862C8E /* DetailsConfigurator.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +181,14 @@
 				368AA8CD274275970073DC03 /* GreetingInteractor.swift in Sources */,
 				368AA8CF274275A80073DC03 /* GreetingConfigurator.swift in Sources */,
 				368AA8CB274275820073DC03 /* GreetingPresenter.swift in Sources */,
+				36CCC6A62742F30400862C8E /* DetailsViewController.swift in Sources */,
 				368AA8B3274273C10073DC03 /* AppDelegate.swift in Sources */,
+				36CCC6AA2742F32E00862C8E /* DetailsInteractor.swift in Sources */,
 				368AA8D127427C050073DC03 /* Person.swift in Sources */,
 				368AA8B5274273C10073DC03 /* SceneDelegate.swift in Sources */,
 				368AA8C92742755C0073DC03 /* GreetingViewController.swift in Sources */,
+				36CCC6A82742F31700862C8E /* DetailsPresenter.swift in Sources */,
+				36CCC6AC2742F35100862C8E /* DetailsConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
