@@ -6,13 +6,16 @@
 //
 protocol GreetingInteractorInputProtocol: AnyObject {
     func provideGreetingData()
+    func changeScreen()
 }
 
 protocol GreetingInteractorOutputProtocol: AnyObject {
     func receiveGreetingData(greetingData: GreetingData)
+    func openDetailScreen()
 }
 
 class GreetingInteractor: GreetingInteractorInputProtocol {
+    
     unowned let presenter: GreetingInteractorOutputProtocol
     
     required init(presenter: GreetingInteractorOutputProtocol) {
@@ -20,11 +23,15 @@ class GreetingInteractor: GreetingInteractorInputProtocol {
     }
     
     func provideGreetingData() {
-        let user = Person(name: "Alex", surname: "Shamor", birthYear: 1997)
+        let user = Person(name: "Walter", surname: "White", birthYear: 1965)
         let age = String(user.birthYear)
         
         let greetingData = GreetingData(name: user.name, surname: user.surname, age: age)
         presenter.receiveGreetingData(greetingData: greetingData)
+    }
+    
+    func changeScreen() {
+        self.presenter.openDetailScreen()
     }
     
 }

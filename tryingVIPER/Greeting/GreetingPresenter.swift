@@ -14,6 +14,7 @@ struct GreetingData {
 class GreetingPresenter: GreetingViewOutputProtocol {
     unowned let view: GreetingViewInputProtocol
     var interactor: GreetingInteractorInputProtocol!
+    var router: GreetingRouterInputProtocol!
     
     required init(view: GreetingViewInputProtocol) {
         self.view = view
@@ -22,6 +23,10 @@ class GreetingPresenter: GreetingViewOutputProtocol {
     func didTapShowGreetingButton() {
         interactor.provideGreetingData()
     }
+    
+    func didScreenButtonTapped() {
+        interactor.changeScreen()
+    }
 }
 
 //MARK: - GreetingInteractorOutputProtocol
@@ -29,5 +34,9 @@ extension GreetingPresenter: GreetingInteractorOutputProtocol {
     func receiveGreetingData(greetingData: GreetingData) {
         let greeting = "Hi, mr. \(greetingData.name) \(greetingData.surname).\nAs I know you were born in \(greetingData.age)!"
         view.setGreeting(greeting)
+    }
+    
+    func openDetailScreen() {
+        router.openDetailsViewController()
     }
 }

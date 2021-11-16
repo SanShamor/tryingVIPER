@@ -14,6 +14,7 @@ protocol GreetingViewInputProtocol: AnyObject {
 protocol GreetingViewOutputProtocol {
     init(view: GreetingViewInputProtocol)
     func didTapShowGreetingButton()
+    func didScreenButtonTapped()
 }
 
 class GreetingViewController: UIViewController {
@@ -28,11 +29,18 @@ class GreetingViewController: UIViewController {
         configurator.configure(with: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsVC = segue.destination as! DetailsViewController
+        let configurator: DetailsConfiguratorInputProtocol = DetailsConfigurator()
+        configurator.configure(with: detailsVC)
+    }
+    
     @IBAction func showGreetingButtonPressed(_ sender: Any) {
         presenter.didTapShowGreetingButton()
     }
     
     @IBAction func goToDetailScreenButtonPressed(_ sender: Any) {
+        presenter.didScreenButtonTapped()
     }
     
 }
